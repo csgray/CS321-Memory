@@ -6,7 +6,10 @@
 #ifndef FILE_MAPALLOC_H_INCLUDED
 #define FILE_MAPALLOC_H_INCLUDED
 
-void * mapAlloc(size_t);
-void mapFree(void *);
+#include <sys/mman.h>
+#include <unordered_map>
+
+void* mapAlloc(size_t);
+void mapFree(void*);
 
 #endif // #ifndef FILE_MAPALLOC_H_INCLUDED
